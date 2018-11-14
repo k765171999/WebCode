@@ -1,0 +1,75 @@
+package com.servlet;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.commons.dbutils.QueryRunner;
+import org.apache.commons.dbutils.handlers.BeanHandler;
+import org.junit.runner.Runner;
+import org.junit.runners.ParentRunner;
+
+import com.domain.user;
+import com.util.JDBCUtil;
+import com.util.JDBCUtil2;
+
+public class LoginServlet extends HttpServlet {
+
+	
+	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		response.setContentType("text/html;charset=utf-8");
+		
+		//1. 获取值
+		
+		String username = request.getParameter("username");
+		String password = request.getParameter("password");
+		System.out.println(username);
+//		response.getWriter().write(username);
+		//2. 连接数据库
+		Connection conn = null;
+		PreparedStatement ps = null;
+		ResultSet rs = null;
+		
+		try {
+			// 1. 连接
+			QueryRunner queryrunner = new QueryRunner(JDBCUtil2.getDataSource());
+			String sql = "select * from t_user where username=? and password=?";
+			queryrunner.query(sql, new BeanHandler<user>(user.class),username,password);
+			ps.setString(1, username);
+			ps.setString(2, password);
+			rs = ps.executeQuery();
+			
+			if(rs.next()){
+				// do what?
+				request.getSession().setAttribute("name", username);
+				response.getWriter().write("success login!");
+				response.sendRedirect("successpage.jsp");
+				
+			}else{
+				response.sendRedirect("loginfailpage.jsp");
+				response.getWriter().write("failed login!");
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally{
+			JDBCUtil.release(conn, ps, rs);
+		}
+		
+		//3. 进行登陆
+	
+	}
+
+	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		doGet(request, response);
+		
+	}
+
+}

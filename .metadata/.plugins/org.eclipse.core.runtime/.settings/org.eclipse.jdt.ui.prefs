@@ -1,0 +1,31 @@
+content_assist_disabled_computers=org.eclipse.jdt.ui.textProposalCategory\u0000org.eclipse.jdt.ui.javaAllProposalCategory\u0000org.eclipse.jdt.ui.javaTypeProposalCategory\u0000org.eclipse.jdt.ui.javaNoTypeProposalCategory\u0000
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="java.io.Closeable"><rhs name\="java.io.FileInputStream"/></lhs><lhs name\="java.lang.AutoCloseable"><rhs name\="java.io.FileInputStream"/><rhs name\="com.uitl.ConnectionWrap"/></lhs><lhs name\="java.io.InputStream"><rhs name\="java.io.FileInputStream"/></lhs><lhs name\="java.lang.Cloneable"><rhs name\="javax.servlet.http.Cookie"/><rhs name\="java.util.Properties"/></lhs><lhs name\="javax.servlet.http.Cookie"><rhs name\="javax.servlet.http.Cookie"/></lhs><lhs name\="java.util.Map"><rhs name\="java.util.LinkedHashMap"/><rhs name\="java.util.Properties"/></lhs><lhs name\="javax.sql.DataSource"><rhs name\="com.uitl.MyDataSource"/><rhs name\="org.apache.commons.dbcp.BasicDataSource"/><rhs name\="com.mchange.v2.c3p0.ComboPooledDataSource"/></lhs><lhs name\="javax.sql.CommonDataSource"><rhs name\="com.uitl.MyDataSource"/><rhs name\="org.apache.commons.dbcp.BasicDataSource"/><rhs name\="com.mchange.v2.c3p0.ComboPooledDataSource"/></lhs><lhs name\="java.sql.Wrapper"><rhs name\="com.uitl.MyDataSource"/><rhs name\="com.uitl.ConnectionWrap"/><rhs name\="org.apache.commons.dbcp.BasicDataSource"/><rhs name\="com.mchange.v2.c3p0.ComboPooledDataSource"/></lhs><lhs name\="com.uitl.MyDataSource"><rhs name\="com.uitl.MyDataSource"/></lhs><lhs name\="com.test.Waiter"><rhs name\="com.test.WaitressWrap"/></lhs><lhs name\="com.test.WaitressWrap"><rhs name\="com.test.WaitressWrap"/></lhs><lhs name\="java.sql.Connection"><rhs name\="com.uitl.ConnectionWrap"/></lhs><lhs name\="org.apache.commons.dbcp.BasicDataSource"><rhs name\="org.apache.commons.dbcp.BasicDataSource"/></lhs><lhs name\="java.util.Hashtable"><rhs name\="java.util.Properties"/></lhs><lhs name\="java.util.Dictionary"><rhs name\="java.util.Properties"/></lhs><lhs name\="java.util.Properties"><rhs name\="java.util.Properties"/></lhs><lhs name\="com.mchange.v2.c3p0.PooledDataSource"><rhs name\="com.mchange.v2.c3p0.ComboPooledDataSource"/></lhs><lhs name\="javax.naming.Referenceable"><rhs name\="com.mchange.v2.c3p0.ComboPooledDataSource"/></lhs><lhs name\="com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource"><rhs name\="com.mchange.v2.c3p0.ComboPooledDataSource"/></lhs><lhs name\="com.mchange.v2.c3p0.impl.PoolBackedDataSourceBase"><rhs name\="com.mchange.v2.c3p0.ComboPooledDataSource"/></lhs><lhs name\="com.mchange.v2.c3p0.impl.IdentityTokenResolvable"><rhs name\="com.mchange.v2.c3p0.ComboPooledDataSource"/></lhs><lhs name\="com.mchange.v2.c3p0.impl.AbstractIdentityTokenized"><rhs name\="com.mchange.v2.c3p0.ComboPooledDataSource"/></lhs><lhs name\="com.mchange.v2.c3p0.impl.IdentityTokenized"><rhs name\="com.mchange.v2.c3p0.ComboPooledDataSource"/></lhs><lhs name\="org.apache.commons.dbutils.ResultSetHandler"><rhs name\="org.apache.commons.dbutils.handlers.BeanHandler"/></lhs><lhs name\="org.apache.commons.dbutils.AbstractQueryRunner"><rhs name\="org.apache.commons.dbutils.QueryRunner"/></lhs><lhs name\="org.apache.commons.dbutils.QueryRunner"><rhs name\="org.apache.commons.dbutils.QueryRunner"/></lhs><lhs name\="com.service.UserService"><rhs name\="com.service.impl.UserServiceImpl"/></lhs></history>
+content_assist_number_of_computers=26
+content_assist_proposals_background=255,255,255
+content_assist_proposals_foreground=0,0,0
+eclipse.preferences.version=1
+fontPropagated=true
+org.eclipse.jdt.internal.ui.navigator.layout=2
+org.eclipse.jdt.ui.editor.tab.width=
+org.eclipse.jdt.ui.formatterprofiles.version=12
+org.eclipse.jdt.ui.javadoclocations.migrated=true
+org.eclipse.jdt.ui.text.code_templates_migrated=true
+org.eclipse.jdt.ui.text.custom_code_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
+org.eclipse.jdt.ui.text.custom_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
+org.eclipse.jdt.ui.text.templates_migrated=true
+org.eclipse.jface.textfont=1|Courier New|10.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Courier New;
+proposalOrderMigrated=true
+spelling_ignore_ampersand_in_properties=true
+spelling_ignore_digits=true
+spelling_ignore_java_strings=true
+spelling_ignore_mixed=true
+spelling_ignore_non_letters=true
+spelling_ignore_sentence=true
+spelling_ignore_single_letters=true
+spelling_ignore_upper=true
+spelling_ignore_urls=true
+spelling_locale_initialized=true
+spelling_user_dictionary_encoding=GBK
+tabWidthPropagated=true
+useAnnotationsPrefPage=true
+useQuickDiffPrefPage=true

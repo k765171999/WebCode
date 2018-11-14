@@ -1,0 +1,6 @@
+package com.service;
+
+public interface UserService {
+	boolean cheakLogin(String username , String password);
+
+}

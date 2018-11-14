@@ -1,0 +1,42 @@
+package com.c3p0;
+
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+
+import org.junit.Test;
+
+import com.mchange.v2.c3p0.ComboPooledDataSource;
+import com.uitl.JDBCUtil;
+
+public class C3P0Demo {
+
+	@Test
+	public void testC3P0(){
+	/*	dataSource.setUser(user);
+		dataSource.setPassword(password);
+		dataSource.setDriverClass(driverClass);
+		dataSource.setJdbcUrl(jdbcUrl);*/
+		Connection conn = null;
+		PreparedStatement ps = null;
+		
+		try {
+			ComboPooledDataSource dataSource = new ComboPooledDataSource();
+			
+			conn = dataSource.getConnection();
+			
+			String sql = "insert into t_user values (null,'xxssssx',10s090)";
+			ps = conn.prepareStatement(sql);
+			
+			ps.executeUpdate();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally{
+			JDBCUtil.release(conn, ps);
+			
+		}
+		
+	}
+			
+}

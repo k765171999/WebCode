@@ -1,0 +1,10 @@
+package com.dao;
+
+import java.sql.SQLException;
+
+public interface UserDao{
+	boolean cheakLogin(String username , String password) throws SQLException;
+	
+	void doRegester(String username , String password ,String usercode) throws SQLException;
+	
+}

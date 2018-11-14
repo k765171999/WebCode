@@ -1,0 +1,8 @@
+package com.dao;
+
+import java.sql.SQLException;
+
+public interface UserDao throws SQLException{
+	boolean cheakLogin(String username , String password);
+	
+}

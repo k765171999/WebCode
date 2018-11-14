@@ -1,0 +1,56 @@
+package com.dao.impl;
+
+import java.sql.SQLException;
+import org.apache.commons.dbutils.QueryRunner;
+import org.apache.commons.dbutils.handlers.BeanHandler;
+
+import com.dao.UserDao;
+import com.domain.user;
+import com.util.JDBCUtil2;
+
+public class UserDaoImpl implements UserDao{
+
+	@Override
+	public boolean cheakLogin(String username, String password) throws SQLException {
+		QueryRunner queryrunner = new QueryRunner(JDBCUtil2.getDataSource());
+		String sql = "select * from userlist where username=? and password=?";
+		//获取查询到的人
+		user user1 = queryrunner.query(sql, new BeanHandler<user>(user.class),username,password);
+		//看是否是空，空的话代表登陆失败
+		
+		if(user1 != null){
+			/*//非空的话还要改变isuse
+			String usql = "UPDATE userlist SET isuse=1 WHERE username=?";
+			queryrunner.update(usql,username);*/
+			return true;
+		}else{
+			return false;
+		}
+		
+		
+		
+		
+		
+		
+		
+		//return user1 != null;
+
+		
+		
+	}
+
+	@Override
+	public void doRegester(String username, String password, String usercode) throws SQLException {
+		
+		QueryRunner queryrunner = new QueryRunner(JDBCUtil2.getDataSource());
+		
+		String sql = "insert into t_user values(null,?,?,?)";
+		queryrunner.update(sql,username,password,usercode);
+		
+		
+		
+	}
+
+
+	
+}

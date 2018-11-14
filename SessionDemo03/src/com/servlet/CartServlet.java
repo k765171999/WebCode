@@ -1,0 +1,47 @@
+package com.servlet;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.LinkedHashMap;
+import java.util.Map;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class CartServlet extends HttpServlet {
+
+	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		response.setContentType("text/html;charset=utf-8");
+		
+		//1. 获取id 
+		int id = Integer.parseInt(request.getParameter("id"));
+		
+		//2. id对应的商品名称
+		String[] names = {"Iphone7","小米7","Iphone8","华为p20","魅族7"};
+		
+		String name = names[id];
+		//3. 存放置 map<String, value>
+		Map<String,Integer> map = (Map<String,Integer>)request.getSession().getAttribute("cart");
+		
+		if(map == null){
+			map = new LinkedHashMap<String, Integer>();
+			request.getSession().setAttribute("cart", map);
+		}
+		//4. 判断是第几次访问
+		if(map.containsKey(name)){
+			map.put(name, map.get(name)+1);
+		}else{
+			map.put(name, 1);
+		}
+		response.getWriter().write("<a href='product_list.jsp'><h3>继续购物</h3></a>");
+		response.getWriter().write("<a href='cart.jsp'><h3>前往购物车</h3></a>");
+
+		
+	}
+	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		doGet(request, response);
+	}
+
+}

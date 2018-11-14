@@ -1,0 +1,12 @@
+package com.c3p0;
+
+import org.junit.Test;
+
+public class C3P0Demo02 {
+
+	@Test
+	public void testC3P0(){
+		
+		
+	}
+}

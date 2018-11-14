@@ -1,0 +1,6 @@
+package com.dao;
+
+public interface UserDao {
+	boolean cheakLogin(String username , String password);
+	
+}

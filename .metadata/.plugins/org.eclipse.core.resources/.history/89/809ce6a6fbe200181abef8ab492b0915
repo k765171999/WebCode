@@ -1,0 +1,43 @@
+package com.servlet;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.service.UserService;
+import com.service.impl.UserServiceImpl;
+import com.util.JDBCUtil;
+
+public class RegesterServlet extends HttpServlet {
+
+	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		response.setCharacterEncoding("text/html;charset=utf-8");
+		
+		String username = request.getParameter("username");
+		String password = request.getParameter("password");
+		String usercode = request.getParameter("usercocde");
+		try {
+			
+			UserService userRegester = new UserServiceImpl();
+			userRegester.doRegester(username, password, usercode);		 
+			 request.getRequestDispatcher("middle_left.html").forward(request, response);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			response.sendRedirect("registerfail.jsp");
+			e.printStackTrace();
+		}
+		
+	}
+
+	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		doGet(request, response);
+	}
+
+}

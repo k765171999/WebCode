@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>HelloWeb</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <!--向tomcat报告，我这个应用有servlet叫 HelloServlet，全路径是com.servlet.HelloServlet-->
+  <servlet>
+  	<servlet-name>HelloServlet</servlet-name>
+  	<servlet-class>com.servlet.HelloServlet</servlet-class>
+  </servlet>
+  
+ <!--  注册servlet的映射。servletName：找到上面的具体Servlet ，url-pattern:在地址栏上的path--> 
+  <servlet-mapping>
+  	<servlet-name>HelloServlet</servlet-name>
+  	<url-pattern>/a</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>HelloServlet02</servlet-name>
+  	<servlet-class>com.servlet.HelloServlet02</servlet-class>
+  </servlet>
+  
+    <servlet-mapping>
+		<servlet-name>HelloServlet02</servlet-name>    
+		<url-pattern>/b</url-pattern>
+    </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>HelloServlet03</servlet-name>
+  	<servlet-class>com.servlet.HelloServlet03</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>HelloServlet03</servlet-name>
+  	<url-pattern>/c</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>HelloServlet04</servlet-name>
+  	<servlet-class>com.servlet.HelloServlet04</servlet-class>
+  	<load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>HelloServlet04</servlet-name>
+  	<url-pattern>/d</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>HelloServletConfig</servlet-name>
+  	<servlet-class>com.servlet.HelloServletConfig</servlet-class>
+  	
+  	<init-param>
+  		<param-name>name</param-name>
+  		<param-value>zhangsan</param-value>
+  	</init-param>
+  	<init-param>
+  		<param-name>address</param-name>
+  		<param-value>beijing</param-value>
+  	</init-param>
+  	<init-param>
+  		<param-name>age</param-name>
+  		<param-value>18</param-value>
+  	</init-param>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>HelloServletConfig</servlet-name>
+	<url-pattern>/f</url-pattern>
+  </servlet-mapping>  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</web-app>

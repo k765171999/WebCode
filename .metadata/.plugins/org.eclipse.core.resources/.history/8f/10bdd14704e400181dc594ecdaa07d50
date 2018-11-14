@@ -1,0 +1,88 @@
+/**
+ *	用于登陆的JS 
+ *
+ * 
+ */
+function check_login()
+{
+/* $.get("/TestWeb/LoginServlet" , function(data ,status) {
+	if(data=="true"){
+		alert("登陆成功！");
+		window.location.href="successpage.jsp";
+	}else{
+		alert("登陆失败！");
+		window.location.href="loginfailpage.jsp";
+	}
+	
+	
+	
+	}); */
+	var username = $("#user_name").val();
+	var password = $("#password").val();
+$.post("/TestWeb/LoginServlet",{username:username,password:password},function(data,status){
+	
+	if(data=="true"){
+		alert("登陆成功！");
+		window.location.href="successpage.jsp";
+	}else{
+		alert("登陆失败！");
+		window.location.href="loginfailpage.jsp";
+	}
+	
+	
+});
+ //------------------
+ //在这里验证用户名和密码
+ /* if()
+ {
+  alert("登录成功！");
+  $("#user_name").val("");
+  $("#password").val("");
+
+ }
+ else
+ {
+  $("#login_form").removeClass('shake_effect');  
+  setTimeout(function()
+  {
+   $("#login_form").addClass('shake_effect')
+  },1);  
+ }*/
+}
+ /*
+function check_register(){
+	var name = $("#r_user_name").val();
+	var pass = $("#r_password").val();
+	var email = $("r_email").val();
+	if(name!="" && pass=="" && email != "")
+	 {
+	  alert("注册成功！");
+	  $("#user_name").val("");
+	  $("#password").val("");
+	 }
+	 else
+	 {
+	  $("#login_form").removeClass('shake_effect');  
+	  setTimeout(function()
+	  {
+	   $("#login_form").addClass('shake_effect')
+	  },1);  
+	 }
+}*/
+
+$(function(){
+	$("#create").click(function(){
+		check_register();
+		return false;
+	})
+	$("#login").click(function(){
+		check_login();
+	return false;
+	})
+	$('.message a').click(function () {
+		$('form').animate({
+			height: 'toggle',
+			opacity: 'toggle'
+		}, 'slow');
+	});
+}) 

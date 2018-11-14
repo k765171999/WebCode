@@ -1,0 +1,7 @@
+#Tomcat publish data
+#Fri Nov 09 19:39:20 CST 2018
+org.eclipse.jst.jee.server\:Ajaxdemo=D\:\\WebServer\\apache-tomcat-7.0.90\\webapps\\Ajaxdemo
+org.eclipse.jst.jee.server\:ConnectionPool01=D\:\\WebServer\\apache-tomcat-7.0.90\\webapps\\ConnectionPool01
+org.eclipse.jst.jee.server\:DemoWeb=D\:\\WebServer\\apache-tomcat-7.0.90\\webapps\\DemoWeb
+org.eclipse.jst.jee.server\:TestWeb=D\:\\WebServer\\apache-tomcat-7.0.90\\webapps\\TestWeb
+org.eclipse.jst.jee.server\:StudentManager=D\:\\WebServer\\apache-tomcat-7.0.90\\webapps\\StudentManager

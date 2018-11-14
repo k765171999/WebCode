@@ -1,0 +1,8 @@
+package com.domain;
+
+public class t_user {
+	
+	private int id;
+	private String username;
+	private String password;
+}

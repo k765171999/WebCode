@@ -1,0 +1,56 @@
+/**
+ *	用于登陆的JS 
+ *
+ * 
+ */
+function check_login()
+{
+	var username = $("#user_name").val();
+	var password = $("#password").val();
+$.post("/TestWeb/LoginServlet",{username:username,password:password},function(data,status){
+	
+	if(data=="true"){
+		alert("登陆成功！");
+		window.location.href="successpage.jsp";
+	}else{
+		alert("登陆失败！");
+		window.location.href="loginfailpage.jsp";
+	}
+	
+	
+});
+}
+
+function check_register(){
+	var username = $("#r_user_name").val();
+	var username = $("#r_password").val();
+	var usercode = $("r_usercode").val();
+	$.post("/TestWeb/RegesterSerlvet",{username:username,password:password,usercode:usercode},function(data,status){
+		
+		if(data=="true"){
+			alert("注册成功！");
+			window.location.href="middle_left.html";
+		}else{
+			alert("注册失败！");
+			//window.location.href="registerfail.jsp";
+		}
+		
+		
+	});
+}
+
+$(function(){
+	$("#create").click(function(){
+		check_register();
+	})
+	$("#login").click(function(){
+		check_login();
+	return false;
+	})
+	$('.message a').click(function () {
+		$('form').animate({
+			height: 'toggle',
+			opacity: 'toggle'
+		}, 'slow');
+	});
+}) 

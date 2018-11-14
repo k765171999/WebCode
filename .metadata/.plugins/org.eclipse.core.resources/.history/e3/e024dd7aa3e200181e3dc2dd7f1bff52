@@ -1,0 +1,11 @@
+package com.service.impl;
+
+import com.service.UserService;
+
+public class UserServiceImpl implements UserService {
+
+	public boolean cheakLogin(String username, String password) {
+		return false;
+	}
+
+}

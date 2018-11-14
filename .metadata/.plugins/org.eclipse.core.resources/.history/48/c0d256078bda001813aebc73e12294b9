@@ -1,0 +1,16 @@
+package com.dao.impl;
+
+import java.util.List;
+
+import com.dao.StuDao;
+import com.domain.Student;
+
+public class StuDaoImpl implements StuDao {
+
+	@Override
+	public List<Student> findAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

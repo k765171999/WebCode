@@ -1,0 +1,19 @@
+package com.service.impl;
+
+import java.sql.SQLException;
+
+import com.dao.UserDao;
+import com.dao.impl.UserDaoImpl;
+import com.service.UserService;
+
+public class UserServiceImpl implements UserService {
+
+	public boolean cheakLogin(String username, String password) throws SQLException {
+		
+		UserDao user = new UserDaoImpl();
+		user.cheakLogin(username, password);
+		
+		return false;
+	}
+
+}

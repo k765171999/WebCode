@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<modules>
+  <module deployMode="EXPLODED" moduleId="org.eclipse.jst.jee.server:ServletContextDemo02" serverId="Tomcat v7.0 Server at localhost"/>
+  <module deployMode="EXPLODED" moduleId="org.eclipse.jst.jee.server:HelloWeb" serverId="Tomcat v7.0 Server at localhost"/>
+  <module deployMode="EXPLODED" moduleId="org.eclipse.jst.jee.server:ServletContextDemo03" serverId="Tomcat v7.0 Server at localhost"/>
+  <module deployMode="EXPLODED" moduleId="org.eclipse.jst.jee.server:RequestRedirctiondemo" serverId="Tomcat v7.0 Server at localhost"/>
+  <module deployMode="EXPLODED" moduleId="org.eclipse.jst.jee.server:DemoTest02" serverId="Tomcat v7.0 Server at localhost"/>
+  <module deployMode="EXPLODED" moduleId="org.eclipse.jst.jee.server:ServletContextDemo" serverId="Tomcat v7.0 Server at localhost"/>
+  <module deployMode="EXPLODED" moduleId="org.eclipse.jst.jee.server:SessionDemo03" serverId="Tomcat v7.0 Server at localhost"/>
+  <module deployMode="EXPLODED" moduleId="org.eclipse.jst.jee.server:TestWeb" serverId="Tomcat v7.0 Server at localhost"/>
+  <module deployMode="EXPLODED" moduleId="org.eclipse.jst.jee.server:JspDemo01" serverId="Tomcat v7.0 Server at localhost"/>
+  <module deployMode="EXPLODED" moduleId="org.eclipse.jst.jee.server:ResponseDemo01" serverId="Tomcat v7.0 Server at localhost"/>
+  <module deployMode="EXPLODED" moduleId="org.eclipse.jst.jee.server:RequestDemo01" serverId="Tomcat v7.0 Server at localhost"/>
+  <module deployMode="EXPLODED" moduleId="org.eclipse.jst.jee.server:Demo04" serverId="Tomcat v7.0 Server at localhost"/>
+  <module deployMode="EXPLODED" moduleId="org.eclipse.jst.jee.server:StudentManager" serverId="Tomcat v7.0 Server at localhost"/>
+  <module deployMode="EXPLODED" moduleId="org.eclipse.jst.jee.server:CookieDemo03" serverId="Tomcat v7.0 Server at localhost"/>
+  <module deployMode="EXPLODED" moduleId="org.eclipse.jst.jee.server:CookieDemo04" serverId="Tomcat v7.0 Server at localhost"/>
+  <module deployMode="EXPLODED" moduleId="org.eclipse.jst.jee.server:ServletRegister" serverId="Tomcat v7.0 Server at localhost"/>
+  <module deployMode="EXPLODED" moduleId="org.eclipse.jst.jee.server:CookieDemo2" serverId="Tomcat v7.0 Server at localhost"/>
+  <module deployMode="EXPLODED" moduleId="org.eclipse.jst.jee.server:ConnectionPool01" serverId="Tomcat v7.0 Server at localhost"/>
+  <module deployMode="EXPLODED" moduleId="org.eclipse.jst.jee.server:Ajaxdemo" serverId="Tomcat v7.0 Server at localhost"/>
+  <module deployMode="EXPLODED" moduleId="org.eclipse.jst.jee.server:TestServletConfig01" serverId="Tomcat v7.0 Server at localhost"/>
+  <module deployMode="EXPLODED" moduleId="org.eclipse.jst.jee.server:DemoWeb" serverId="Tomcat v7.0 Server at localhost"/>
+  <module deployMode="EXPLODED" moduleId="org.eclipse.jst.jee.server:CookieDemo" serverId="Tomcat v7.0 Server at localhost"/>
+  <module deployMode="EXPLODED" moduleId="org.eclipse.jst.jee.server:DemoTest" serverId="Tomcat v7.0 Server at localhost"/>
+</modules>

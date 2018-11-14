@@ -1,0 +1,36 @@
+package com.c3p0;
+
+import java.beans.PropertyVetoException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+
+import org.junit.Test;
+
+import com.mchange.v2.c3p0.ComboPooledDataSource;
+import com.uitl.JDBCUtil2;
+
+public class C3P0Demo {
+
+	
+	@Test
+	public void testC3P0(){
+		ComboPooledDataSource cpds = new ComboPooledDataSource();
+		try {
+			cpds.setDriverClass( "com.mysql.cj.jdbc.Driver" );
+			cpds.setJdbcUrl( "jdbc:mysql://localhost/students" );
+			cpds.setUser("root");                                  
+			cpds.setPassword("123456");  
+			
+			Connection conn = cpds.getConnection();
+			String sql = "select * from t_user";
+			PreparedStatement ps = conn.prepareStatement(sql);
+			
+			ps.executeQuery();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally{
+			JDBCUtil2.release(conn, ps);
+		}
+	}
+}
